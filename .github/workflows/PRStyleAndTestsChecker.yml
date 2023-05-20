@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v3
             
       - name: Npm install 🛒
-        run: npm install
+        run: npm install --legacy-peer-deps
       
       - name: Lint 📝
         run: npm run lint
