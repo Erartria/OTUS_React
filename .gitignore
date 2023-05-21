@@ -1,7 +1,13 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,visualstudiocode,storybookjs
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,visualstudiocode,storybookjs
 
-### react ###
+### Builds and secrets ###
+build
+*.env
+# Template for env files
+!clear.env
+
+### react ##
 .DS_*
 *.log
 logs
@@ -41,5 +47,4 @@ storybook-static/
 # Ignore all local history of files
 .history
 .ionide
-build 
 # End of https://www.toptal.com/developers/gitignore/api/react,visualstudiocode,storybookjs

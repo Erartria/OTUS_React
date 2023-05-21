@@ -1,3 +1,7 @@
+![PR OPEN: Tests checker](https://github.com/Erartria/OTUS_react/actions/workflows/PRStyleAndTestsChecker.yml/badge.svg)
+![PUSH TO MASTER: deploy to GH pages](https://github.com/Erartria/OTUS_react/actions/workflows/PushMasterDeployToGhPages.yml/badge.svg)
+![PUSH ANY: deploy to Chromatic](https://github.com/Erartria/OTUS_react/actions/workflows/PushAnyDeployToChromatic.yml/badge.svg)
+
 # Otus ReactJS lessons
 
 ## Lesson 2

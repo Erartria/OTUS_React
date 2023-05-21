@@ -16,7 +16,10 @@
     "storybook:start": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "deploy:gh-pages": "npm run build && gh-pages -d build",
-    "deploy:chromatic": "npx chromatic --project-token=chpt_a36ecc0344f9f14",
+
+    "deploy:chromatic": "env-cmd npx chromatic --project-token= .env.CHROMATIC_PROJECT_TOKEN",
+    "build-storybook": "storybook build",
+
     "test:loki": "npx loki test",
     "test": "jest",
     "update:loki": "npx loki update",
@@ -24,7 +27,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-
     "start:lesson_2": "npx ts-node lesson_2/src",
     "test:lesson_2": "npx jest --verbose lesson_2/tests"
   },
@@ -78,6 +80,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromatic": "^6.17.4",
     "clsx": "^1.2.1",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
