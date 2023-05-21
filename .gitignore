@@ -3,6 +3,7 @@
 
 ### Builds and secrets ###
 build
+coverage
 *.env
 # Template for env files
 !clear.env
