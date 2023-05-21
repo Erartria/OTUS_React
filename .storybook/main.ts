@@ -12,6 +12,7 @@ const config: StorybookConfig = {
     '@storybook/addon-actions',
     '@storybook/preset-create-react-app',
     '@storybook/addon-interactions',
+    '@storybook/addon-docs'
   ],
   typescript: {
     check: false,

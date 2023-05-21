@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { reportWebVitals } from "./reportWebVitals";
-import { App } from "./components/App";
+import { Board } from "./components/Board";
 
 const element = document.getElementById("root");
 if (element) {
   const root = ReactDOM.createRoot(element);
   root.render(
     <React.StrictMode>
-      <App text="example" />
+      <Board size={{ width: 16, height: 16 }} />
     </React.StrictMode>
   );
 }
