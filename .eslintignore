@@ -8,3 +8,4 @@ dist
 presa
 build
 **.d.ts
+static
