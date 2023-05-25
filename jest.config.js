@@ -7,11 +7,20 @@ module.exports = {
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx",
   },
   moduleNameMapper: {
-    // https://jestjs.io/docs/en/webpack#handling-static-assets
-    "^.+\\.(css|less|scss|sass)$": "babel-jest",
-    "^@/(.*)$": "<rootDir>/src/$1",
+    /* Handle CSS imports (with CSS modules)
+    https://jestjs.io/docs/webpack#mocking-css-modules */
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+
+    // Handle CSS imports (without CSS modules)
+    "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
+
+    /* Handle image imports
+    https://jestjs.io/docs/webpack#handling-static-assets */
+    "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$":
+      "<rootDir>/__mocks__/fileMock.ts",
   },
   setupFilesAfterEnv: ["<rootDir>/internals/setupTests.ts"],
   // testPathIgnorePatterns: ["e2e"],

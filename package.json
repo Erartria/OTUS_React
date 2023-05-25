@@ -16,10 +16,8 @@
     "storybook:start": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "deploy:gh-pages": "npm run build && gh-pages -d build",
-
     "deploy:chromatic": "env-cmd npx chromatic --project-token= .env.CHROMATIC_PROJECT_TOKEN",
     "build-storybook": "storybook build",
-
     "test:loki": "npx loki test",
     "test": "jest",
     "update:loki": "npx loki update",
@@ -63,6 +61,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.5",
     "@storybook/addon-actions": "^7.0.11",
+    "@storybook/addon-docs": "^7.0.12",
     "@storybook/addon-essentials": "^7.0.11",
     "@storybook/addon-interactions": "^7.0.11",
     "@storybook/addon-links": "^7.0.11",
@@ -83,6 +82,7 @@
     "env-cmd": "^10.1.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-mdx": "^2.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "fast-deep-equal": "^3.1.3",
@@ -97,6 +97,7 @@
     "sass": "^1.62.1",
     "storybook": "^7.0.11",
     "styled-component": "^2.8.0",
+    "styled-components": "^6.0.0-rc.1",
     "typescript": "^5.0.4",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1"
