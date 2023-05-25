@@ -3,9 +3,10 @@
 // Нужно заменить FIXME на тип который достанет из Order все возможные состояния (state)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type FIXME = any;
+type FIXME = Pick<Order, "state">["state"];
+//type FIXME = Order["state"];
 
-type Order =
+export type Order =
   | {
       state: "initial";
       sum: number;
